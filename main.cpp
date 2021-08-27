@@ -6,6 +6,8 @@ using namespace stateestimation;
 using namespace std;
 
 int main() {
+  std::cout << "att-est: starting..." << std::endl;
+
   AttitudeEstimator est;
   while (1) {
     double dt = 0.02;
@@ -13,7 +15,7 @@ int main() {
     double g[3] = {};
     double m[3] = {};
 
-    est.setQLTime(5);
+    // est.setQLTime(5);
 
     cin >> a[0] >> a[1] >> a[2] >> g[0] >> g[1] >> g[2];
 
@@ -32,5 +34,6 @@ int main() {
          << q[3] << "\t" << endl;
   }
 
+  std::cout << "att-est: exiting..." << std::endl;
   return 0;
 }
